@@ -7,7 +7,7 @@ import RestaurantList from "@/components/RestaurantList";
 import useRestaurants from "@/hooks/useRestaurants";
 import useRestaurantsFilter from "@/hooks/useRestaurantsFilter";
 
-const Home = () => {
+const HomeContent = () => {
 	const {
 		restaurants,
 		isLoading,
@@ -28,7 +28,7 @@ const Home = () => {
 		setCategory("");
 		setOpenNow(undefined);
 		setPriceRange(undefined);
-		setCurrentPage(1); // Reset to the first page
+		setCurrentPage(1);
 	};
 
 	const paginate = (pageNumber: number) => {
@@ -36,11 +36,11 @@ const Home = () => {
 	};
 
 	return (
-		<div>
+		<div className=" ">
 			<Navbar />
 			<Header />
 			<div className="flex mx-auto">
-				<div className="w-50 p-8 border-r">
+				<div className="w-full md:w-1/4 p-4 md:p-6 lg:p-8 border-r">
 					<div className="mb-4 flex justify-between items-center">
 						<h2 className="font-bold">Filter</h2>
 						<span
@@ -61,7 +61,6 @@ const Home = () => {
 						</span>
 					</div>
 
-					{/* Open Now */}
 					<div className="mb-4">
 						<h3 className="font-semibold mb-2">Open Now</h3>
 						<label className="flex items-center">
@@ -75,7 +74,6 @@ const Home = () => {
 						</label>
 					</div>
 
-					{/* Price */}
 					<div className="mb-4">
 						<h3 className="font-semibold mb-2">Price</h3>
 						<select
@@ -92,7 +90,6 @@ const Home = () => {
 						</select>
 					</div>
 
-					{/* Categories/Cuisines */}
 					<div>
 						<h3 className="font-semibold mb-2">Categories/Cuisines</h3>
 						<select
@@ -115,9 +112,9 @@ const Home = () => {
 						</select>
 					</div>
 				</div>
-				<div className="flex-1 p-6">
+				<div className="flex-1 p-4 md:p-6 lg:p-8">
 					<div className="mb-4 flex justify-between items-center">
-						<h1 className="text-3xl font-bold">Restaurants</h1>
+						<h1 className="text-2xl md:text-3xl font-bold">Restaurants</h1>
 					</div>
 					{isLoading ? (
 						<RestaurantCardSkeleton />
@@ -136,4 +133,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default HomeContent;

@@ -1,36 +1,60 @@
-import React from "react";
+import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
+import { Input } from "./ui/input";
 
 const Header = () => {
 	return (
-		<header
-			className="bg-cover bg-center h-80"
-			style={{ backgroundImage: "url(/img/header.jpg)" }}
-		>
-			<div className="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-white">
-				<h1 className="text-4xl font-bold mb-4">
-					Stop looking for a restaurant - find it.
-				</h1>
-				<div className="w-3/4 relative">
-					<input
-						type="text"
-						placeholder="Search for Restaurants by Name, Cuisine, Location"
-						className="w-full p-3 rounded-3xl text-black pl-10" 
-					/>
-					<svg
-						className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"
-						xmlns="http://www.w3.org/2000/svg"
-						width="1em"
-						height="1em"
-						viewBox="0 0 24 24"
-					>
-						<path
-							fill="currentColor"
-							d="M15.096 5.904a6.5 6.5 0 1 0-9.192 9.192a6.5 6.5 0 0 0 9.192-9.192M4.49 4.49a8.5 8.5 0 0 1 12.686 11.272l5.345 5.345l-1.414 1.414l-5.345-5.345A8.501 8.501 0 0 1 4.49 4.49"
-						/>
-					</svg>
+		<div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+			<img
+				alt=""
+				src="/img/header.jpg"
+				className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+			/>
+			<div
+				aria-hidden="true"
+				className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+			>
+				<div
+					style={{
+						clipPath:
+							"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+					}}
+					className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+				/>
+			</div>
+			<div
+				aria-hidden="true"
+				className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+			>
+				<div
+					style={{
+						clipPath:
+							"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+					}}
+					className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+				/>
+			</div>
+			<div className="container p-8 mx-auto max-w-7xl px-6 lg:px-8 space-y-4">
+				<div className="mx-auto  text-center">
+					<h2 className="text-2xl font-bold tracking-tight text-white sm:text-6xl">
+						Stop looking for a restaurant - find it.
+					</h2>
+					<p className="mt-6 text-lg leading-8 text-gray-300">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea omnis
+						iure tempore?
+					</p>
+					<div className="px-12 flex text-center items-center justify-center">
+						<div className="relative w-3/4">
+							<Input
+								className="w-full rounded-full pl-10"
+								placeholder="Search for Restaurants by Name, Cuisine, Location"
+								type="text"
+							/>
+							<MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+						</div>
+					</div>
 				</div>
 			</div>
-		</header>
+		</div>
 	);
 };
 
