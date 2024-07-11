@@ -11,32 +11,6 @@ const useRestaurants = () => {
 	const [error, setError] = useState<unknown>();
 	const [category, setCategory] = useState<string>("");
 
-	// useEffect(() => {
-	//     setRestaurants(undefined);
-	//     setIsLoading(true);
-	//     getAllRestaurants(currentPage, category).then((result) => {
-	//         setRestaurants(result);
-	//         setIsLoading(false);
-	//     });
-	// }, [category]);
-
-	// const loadMore = async () => {
-	//     try {
-	//         if (restaurants && parseInt(restaurants.paging.total_results) > restaurants.data.length) {
-	//             setIsLoading(true);
-	//             setCurrentPage(currentPage + 1);
-	//             const { data } = await getAllRestaurants(currentPage + 1, category).then((result) => result);
-	//             const currentRestaurants = restaurants;
-	//             currentRestaurants.data.push(...data);
-	//             setRestaurants(currentRestaurants);
-	//         }
-	//     } catch (error) {
-	//         setError(error);
-	//     } finally {
-	//         setIsLoading(false);
-	//     }
-	// };
-
 	useEffect(() => {
 		const fetchRestaurants = async () => {
 			setIsLoading(true);

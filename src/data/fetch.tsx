@@ -1,9 +1,5 @@
 import { TRestaurantDetails, TRestaurantsResponse } from "@/types/Restaurant";
 
-
-
-
-
 export const options = {
     headers: {
         'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
