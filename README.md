@@ -9,8 +9,8 @@ Untuk memulai proyek ini, ikuti langkah-langkah berikut:
 
 1. Clone repositori ini:
     ```sh
-    git clone https://github.com/username/repo-name.git
-    cd repo-name
+    git clone https://github.com/zvn7/FrontendDevReactjs-IlhamMaulana.git
+    cd FrontendDevReactjs-IlhamMaulana
     ```
 
 2. Install dependencies menggunakan npm:
